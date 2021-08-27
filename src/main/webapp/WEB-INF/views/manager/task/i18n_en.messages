@@ -1,0 +1,32 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.manager.task.list.label.title = Title
+authenticated.manager.task.list.label.start = Start
+authenticated.manager.task.list.label.end = End
+
+authenticated.manager.task.list.button.delete = Delete
+authenticated.manager.task.list.button.update = Update
+
+authenticated.manager.task.create.label.title = Title:
+authenticated.manager.task.create.label.start = Start:
+authenticated.manager.task.create.label.end = End:
+authenticated.manager.task.create.label.workload = Workload:
+authenticated.manager.task.create.label.description = Description:
+authenticated.manager.task.create.label.optionalLink = Optional Link: 
+authenticated.manager.task.create.label.privacy = Private
+
+authenticated.manager.task.form.button.create = Create
+authenticated.manager.task.form.button.return = Return
+
+manager.task.error.spam = Text detected as Spam
+manager.task.error.fechafin = End date can´t be before start date
+manager.task.error.fechainicio = Start date can´t be before today
+manager.task.error.workload = The workload must be lower or equals than the task's execution period

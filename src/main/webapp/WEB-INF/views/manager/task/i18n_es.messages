@@ -1,0 +1,33 @@
+# i18n_es.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.manager.task.list.label.title = Título
+authenticated.manager.task.list.label.start = Comienzo
+authenticated.manager.task.list.label.end = Final
+
+authenticated.manager.task.list.button.delete = Eliminar
+authenticated.manager.task.list.button.update = Editar
+
+authenticated.manager.task.create.label.title = Título:
+authenticated.manager.task.create.label.start = Comienzo:
+authenticated.manager.task.create.label.end = Final:
+authenticated.manager.task.create.label.workload = Carga de trabajo:
+authenticated.manager.task.create.label.description = Descripción:
+authenticated.manager.task.create.label.optionalLink = Link Opcional: 
+authenticated.manager.task.create.label.privacy = Privado
+authenticated.manager.task.create.label.manager = Manager
+
+authenticated.manager.task.form.button.create = Crear
+authenticated.manager.task.form.button.return = Volver
+
+manager.task.error.spam = Texto detectedo como Spam
+manager.task.error.fechafin = La fecha de fin no puede ser anterior a la de inicio
+manager.task.error.fechainicio = La fecha de inicio no puede ser anterior a la actual
+manager.task.error.workload = La carga de trabajo debe ser menor o igual al periodo de ejecución de la tarea.

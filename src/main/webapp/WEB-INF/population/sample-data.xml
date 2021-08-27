@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (C) 2012-2021 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
+
+
+	<!-- Managers -->
+	
+	<bean name="manager01UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager01" />
+		<property name="password" value="manager01" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Manager" />
+				<property name="surname" value="Acme.com" />
+				<property name="email" value="manager01@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="manager01Manager" />
+				<ref bean="manager01Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager01Manager" class="acme.framework.entities.Manager">
+		<property name="userAccount" ref="manager01UserAccount" />
+	</bean>
+	
+	<bean name="manager01Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager01UserAccount" />
+	</bean>
+
+	<bean name="manager02UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager02" />
+		<property name="password" value="manager02" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Manager" />
+				<property name="surname" value="Acme.com" />
+				<property name="email" value="manager01@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="manager02Manager" />
+				<ref bean="manager02Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager02Manager" class="acme.framework.entities.Manager">
+		<property name="userAccount" ref="manager02UserAccount" />
+	</bean>
+	
+	<bean name="manager02Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager02UserAccount" />
+	</bean>
+	
+<!-- Tasks -->
+
+<bean id="task01" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 1"/>
+	<property name="start" value="2021/09/12 15:00"/>
+	<property name="end"   value="2021/09/13 15:00"/>
+	<property name="workload" value="2.0"/>
+	<property name="description" value="Esto es una tarea"/>
+	<property name="optionalLink" value="http://www.example.org"/>
+	<property name="privacy" value="true"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task02" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 2"/>
+	<property name="start" value="2021/09/15 15:00"/>
+	<property name="end"   value="2021/09/17 15:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task03" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 3"/>
+	<property name="start" value="2021/09/17 18:00"/>
+	<property name="end"   value="2021/09/19 18:00"/>
+	<property name="workload" value="6.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example1.org"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task04" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 4"/>
+	<property name="start" value="2021/09/08 18:00"/>
+	<property name="end"   value="2021/09/13 18:00"/>
+	<property name="workload" value="9.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task05" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 5"/>
+	<property name="start" value="2021/09/20 14:00"/>
+	<property name="end"   value="2021/09/25 14:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example2.org"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task06" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 6"/>
+	<property name="start" value="2021/10/03 10:00"/>
+	<property name="end"   value="2021/10/05 10:00"/>
+	<property name="workload" value="9.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task07" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 7"/>
+	<property name="start" value="2021/11/15 16:00"/>
+	<property name="end"   value="2021/11/17 16:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example3.org"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task08" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 8"/>
+	<property name="start" value="2021/09/05 18:00"/>
+	<property name="end"   value="2021/09/07 18:00"/>
+	<property name="workload" value="5.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="true"/>
+	<property name="idmanager" value="7"/>
+</bean>
+
+<bean id="task09" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 9"/>
+	<property name="start" value="2021/09/08 08:00"/>
+	<property name="end"   value="2021/09/09 08:00"/>
+	<property name="workload" value="5.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example4.org"/>
+	<property name="privacy" value="true"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task10" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 10"/>
+	<property name="start" value="2021/02/20 15:00"/>
+	<property name="end"   value="2021/02/22 15:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task11" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 11"/>
+	<property name="start" value="2021/03/11 11:00"/>
+	<property name="end"   value="2021/03/15 11:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example5.org"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task12" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 12"/>
+	<property name="start" value="2021/01/10 19:00"/>
+	<property name="end"   value="2021/01/15 19:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task13" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 13"/>
+	<property name="start" value="2021/03/02 20:00"/>
+	<property name="end"   value="2021/03/06 20:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example6.org"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task14" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 14"/>
+	<property name="start" value="2021/03/05 13:00"/>
+	<property name="end"   value="2021/03/07 13:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task15" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 15"/>
+	<property name="start" value="2021/02/17 18:00"/>
+	<property name="end"   value="2021/02/20 18:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example7.org"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task16" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 16"/>
+	<property name="start" value="2021/08/20 15:00"/>
+	<property name="end"   value="2021/08/23 15:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task17" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 17"/>
+	<property name="start" value="2021/08/20 15:00"/>
+	<property name="end"   value="2021/08/22 15:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="optionalLink" value="http://www.example8.org"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<bean id="task18" class="acme.framework.entities.Task">
+	<property name="title" value="Tarea 18"/>
+	<property name="start" value="2021/08/20 18:00"/>
+	<property name="end"   value="2021/08/24 18:00"/>
+	<property name="workload" value="8.0"/>
+	<property name="description" value="Esto es otra tarea"/>
+	<property name="privacy" value="false"/>
+	<property name="idmanager" value="10"/>
+</bean>
+
+<!-- Shouts -->
+
+<bean id="shout01" class="acme.framework.entities.Shout">
+	<property name="moment" value="2021/05/03 19:39"/>
+	<property name="author" value="John Doe"/>
+	<property name="text"   value="Im Happy"/>
+	<property name="info"> <null/> </property>
+</bean>
+
+<bean id="shout02" class="acme.framework.entities.Shout">
+	<property name="moment" value="2021/05/02 15:55"/>
+	<property name="author" value="Jane Doe"/>
+	<property name="text"   value="Im Sad"/>
+	<property name="info" value="http://www.example.org"/>
+</bean>
+
+<bean id="shout03" class="acme.framework.entities.Shout">
+	<property name="moment" value="2011/07/27 00:00"/>
+	<property name="author" value="Antonio José"/>
+	<property name="text"   value="Ostia tío que no lo he enchufado"/>
+	<property name="info" value="http://www.aeromodelismo.com/"/>
+</bean>
+
+<bean id="shout04" class="acme.framework.entities.Shout">
+	<property name="moment" value="2003/11/21 19:07"/>
+	<property name="author" value="Manuel Ruiz de Lopera"/>
+	<property name="text"   value="Me estais exigiendo que me estais cansando"/>
+	<property name="info"> <null/> </property>
+</bean>
+
+<bean id="shout05" class="acme.framework.entities.Shout">
+	<property name="moment" value="2000/01/01 22:00"/>
+	<property name="author" value="Manuel Ruiz de Lopera"/>
+	<property name="text"   value="Aquí tenéis la caja de herramientas"/>
+	<property name="info"> <null/> </property>
+</bean>
+
+<bean id="shout06" class="acme.framework.entities.Shout">
+	<property name="moment" value="2021/05/02 2:10"/>
+	<property name="author" value="Antonio Bermejo"/>
+	<property name="text"   value="Tengo sueño"/>
+	<property name="info"> <null/> </property>
+</bean>
+
+<bean id="shout07" class="acme.framework.entities.Shout">
+	<property name="moment" value="2021/05/01 12:20"/>
+	<property name="author" value="Carlos Ruiz"/>
+	<property name="text"   value="Buenos días"/>
+	<property name="info"> <null/> </property>
+</bean>
+
+<bean id="shout08" class="acme.framework.entities.Shout">
+	<property name="moment" value="2021/05/01 15:55"/>
+	<property name="author" value="John Smith"/>
+	<property name="text"   value="Im Sad"/>
+	<property name="info" value="http://www.example.org"/>
+</bean>
+
+<bean id="shout09" class="acme.framework.entities.Shout">
+	<property name="moment" value="2021/05/02 15:30"/>
+	<property name="author" value="Billie Eilish"/>
+	<property name="text"   value="Im Sad"/>
+	<property name="info" value="http://www.example.org"/>
+</bean>
+
+</beans>

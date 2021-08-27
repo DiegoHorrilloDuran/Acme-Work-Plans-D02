@@ -1,0 +1,23 @@
+# i18n_es.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.label.numberOfPrivateTasks = Número de tareas privadas:
+administrator.dashboard.form.label.numberOfPublicTasks = Número de tareas públicas: 
+administrator.dashboard.form.label.numberOfFinishedTasks = Número de tareas finalizadas: 
+administrator.dashboard.form.label.numberOfUnfinishedTasks = Número de tareas no finalizadas: 
+administrator.dashboard.form.label.maxTaskExecutionPeriod = Período máximo de ejecución de la tarea (días,fracciones): 
+administrator.dashboard.form.label.minTaskExecutionPeriod = Período mínimo de ejecución de la tarea (días,fracciones): 
+administrator.dashboard.form.label.avgTaskExecutionPeriods = Promedio de períodos de ejecución de tareas (días,fracciones): 
+administrator.dashboard.form.label.stdDevTaskExecutionPeriods = Desviación típica de lo periodos de ejecución (días,fracciones): 
+administrator.dashboard.form.label.maxTaskWorkload = Carga de trabajo máxima de tareas (Horas,minutos): 
+administrator.dashboard.form.label.minTaskWorkload = Carga de trabajo mínima de la tarea (Horas,minutos): 
+administrator.dashboard.form.label.avgTaskWorkloads = Promedio de cargas de trabajo de tareas (Horas,minutos): 
+administrator.dashboard.form.label.stdDevTaskWorkloads = Desviación típica de la cargas de trabajo (Horas,minutos): 
+administrator.dashboard.form.button.return = Volver

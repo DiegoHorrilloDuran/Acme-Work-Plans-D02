@@ -1,0 +1,15 @@
+#Listado
+anonymous.shout.list.label.moment = Momento
+anonymous.shout.list.label.author = Autor
+anonymous.shout.list.label.text = Texto
+anonymous.shout.list.label.info = Información
+
+#Formulario
+anonymous.shout.form.label.author = Autor
+anonymous.shout.form.label.text = Texto
+anonymous.shout.form.label.info = Información
+anonymous.shout.form.button.create = Gritar
+anonymous.shout.form.button.return = Volver
+
+#Spam
+anonymous.shout.error.spam = Texto detectado como Spam
