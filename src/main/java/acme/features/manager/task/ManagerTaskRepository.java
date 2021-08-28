@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.framework.entities.CustomisationParameter;
+import acme.framework.entities.Manager;
 import acme.framework.entities.Task;
 import acme.framework.repositories.AbstractRepository;
 
@@ -21,4 +22,7 @@ public interface ManagerTaskRepository extends AbstractRepository {
 	
 	@Query("select c from CustomisationParameter c")
 	List<CustomisationParameter> findSpam();
+	
+	@Query("select m from Manager m where m.id = ?1")
+	Manager findManagerById(int id);
 }

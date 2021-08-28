@@ -13,7 +13,7 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest {
   @Order(30)
   public void listAllTasks(final int recordIndex, final String Title, final String Start,final String End,final String Workload, final String Description, final String OptionalLink) {
 		super.signIn("administrator", "administrator");
-		super.clickOnMenu("Authenticated", "Public tasks");
+		super.clickOnMenu("Authenticated", "Finished public tasks");
 		
 		super.checkColumnHasValue(recordIndex, 0, Title);
 		super.checkColumnHasValue(recordIndex, 1, Start);

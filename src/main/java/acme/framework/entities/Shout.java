@@ -1,6 +1,6 @@
 package acme.framework.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
@@ -29,7 +29,7 @@ public class Shout extends DomainEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
-	protected Date				moment;
+	protected LocalDate				moment;
 
 	@NotBlank
 	@Size(min=5,max=25)

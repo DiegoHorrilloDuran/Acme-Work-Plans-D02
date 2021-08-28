@@ -1,2 +1,2 @@
-recordIndex,title,start,end,workload,description,optionalLink
-0,Tarea 4,2021/09/08 18:00,2021/09/13 18:00,9.00,Esto es otra tarea,
+recordIndex,title,start,end,workload,description,optionalLink,newTitle,newStart,newEnd,newWorkload,newDescription,newOptionalLink
+0,Tarea 8,2021/09/05 18:00,2021/09/07 18:00,5.00,Esto es otra tarea,,Tarea 4,2021/09/08 18:00,2021/09/13 18:00,9.00,Esto es otra tarea,

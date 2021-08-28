@@ -76,7 +76,7 @@
 	<!-- Customisation parameters -->
 	
 	<bean id="CustomParam" class="acme.framework.entities.CustomisationParameter">
-		<property name="spamWords" value="sex,hard core,viagra,cialis,nigeria,you’ve won,million dollar"/>
+		<property name="spamWords" value="sex,duro,hard core,viagra,cialis,nigeria,has ganado,you've won,millon de dolares,million dollars"/>
 		<property name="threshold" value="10.0"/>
 	</bean>
 	

@@ -2,8 +2,7 @@ package acme.features.manager.task;
 
 
 
-import java.time.Instant;
-import java.util.Date;
+import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,9 +26,12 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
+		final int id = request.getModel().getInteger("id");
+		final Task task = this.repository.findOneTaskById(id);
+		final int idManager = task.getIdmanager();   //idManager es el Id del UsserAccount del manager que ha creado la tarea.
+		final int currentId = request.getPrincipal().getAccountId();
 
-		return true;
-		
+		return currentId == idManager;
 	}
 
 	@Override
@@ -71,15 +73,15 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert entity != null;
 		assert errors != null;
 		
-		final Date ahora = Date.from(Instant.now());
+		final LocalDate ahora = LocalDate.now();
 		Double wl = entity.getWorkload();
 		if (wl != null) {
 			wl = Duration.correctPeriod(wl);
 		}
 
 		if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
-			errors.state(request, !entity.getStart().before(ahora), "start", "manager.task.error.fechainicio");
-			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.error.fechafin");
+			errors.state(request, !entity.getStart().isBefore(ahora), "start", "manager.task.error.fechainicio");
+			errors.state(request, entity.getStart().isBefore(entity.getEnd()), "end", "manager.task.error.fechafin");
 		}
 
 		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {
@@ -108,15 +110,15 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert entity != null;
 		
 		String title;
-		Date start;
-		Date end;
+		LocalDate start;
+		LocalDate end;
 		Double workload;
 		String description;
 		Boolean privacy;
 		
 		title = request.getModel().getString("title");
-		start = request.getModel().getDate("start");
-		end = request.getModel().getDate("end");
+		start = request.getModel().getLocalDate("start");
+		end = request.getModel().getLocalDate("end");
 		workload = request.getModel().getDouble("workload");
 		description = request.getModel().getString("description");
 		privacy = request.getModel().getBoolean("privacy");

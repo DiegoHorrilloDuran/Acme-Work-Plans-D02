@@ -12,6 +12,7 @@
 
 package acme.framework.components;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -202,6 +203,17 @@ public class Model {
 		// assert value is nullable
 
 		this.current.put(name, value);
+	}
+
+	public LocalDate getLocalDate(final String string) {
+		assert !StringHelper.isBlank(string);
+		assert this.hasAttribute(string);
+
+		LocalDate result;
+
+		result = this.getAttribute(string, LocalDate.class);
+
+		return result;
 	}
 
 }

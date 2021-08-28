@@ -19,10 +19,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<name>Acme Work Plans</name>
-	<description>This is Acme Work Plans. A project by students of Design &amp; Testing.</description>
+	<description>This is Acme-Work-Plans. A project by students of Design &amp; Testing.</description>
 
 	<artifactId>Acme-Work-Plans</artifactId>
-	<version>21.4</version>
+	<version>21.5</version>
 	<packaging>war</packaging>
 
 	<parent>

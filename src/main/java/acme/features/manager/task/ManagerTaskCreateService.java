@@ -1,8 +1,7 @@
 
 package acme.features.manager.task;
 
-import java.time.Instant;
-import java.util.Date;
+import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -70,15 +69,15 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert entity != null;
 		assert errors != null;
 
-		final Date ahora = Date.from(Instant.now());
+		final LocalDate ahora = LocalDate.now();
 		Double wl = entity.getWorkload();
 		if (wl != null) {
 			wl = Duration.correctPeriod(wl);
 		}
 
 		if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
-			errors.state(request, !entity.getStart().before(ahora), "start", "manager.task.error.fechainicio");
-			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.error.fechafin");
+			errors.state(request, !entity.getStart().isBefore(ahora), "start", "manager.task.error.fechainicio");
+			errors.state(request, entity.getStart().isBefore(entity.getEnd()), "end", "manager.task.error.fechafin");
 		}
 
 		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {

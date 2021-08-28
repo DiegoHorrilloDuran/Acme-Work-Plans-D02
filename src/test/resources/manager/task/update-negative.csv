@@ -1,8 +1,17 @@
 recordIndex,title,start,end,workload,description,optionalLink
 0,,,,,,
-2, Tarea viagra,2021/09/12 15:00,2021/09/13 15:00,3.00,Esto es una tarea,http://www.example.org
-3, Tarea 2,2021/09/17 00:00,2021/09/17 15:00,8.00,Esto es otra nigeria,
-5, Tarea 5,2011/09/20 14:00,2011/09/25 14:00,8.00,Esto es otra tarea,http://www.example2.org
-6, Tarea 6,2021/10/03 10:00,2011/10/05 10:00,9.00,Esto es otra tarea,
-7, Tarea 7,2021/11/15 16:00,2021/11/17 16:00,50.00,Esto es otra tarea,http://www.example3.org
-1, Tarea 4,2021/09/08 18:00,2021/09/13 18:00,0.00,Esto es otra tarea,
+1,,2021/06/05 00:00,2021/08/07 16:00,15.00,esto es algo,
+2,TareaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTes,2021/06/05 00:00,2021/08/07 16:00,15.00,esto es algo,
+3,viagraTEST,2021/06/05 00:00,2021/08/07 16:00,15.00,esto es algo,
+4,TareaTESTFechaInicioVacia,,2021/12/18 18:00,15.00,esto es algo,
+5,TareaTESTFechaFinVacia,2018/07/10 00:00,,15.00,esto es algo,
+6,TareaTESTFechaInicioAnteriorActual,2018/07/10 00:00,2021/07/09 18:00,15.00,esto es algo,
+7,TareaTESTFechaFinAnteriorActual,2021/07/10 00:00,2018/07/10 18:00,15.00,esto es algo,
+7,TareaTESTFechaFinAnteriorFechaInicio,2021/07/10 00:00,2021/07/09 23:59,15.00,esto es algo,
+7,TareaTESTWorkloadDeltaNegativo,2021/07/10 00:00,2021/07/10 01:00,-0.01,esto es algo,
+7,TareaTESTWorkload0,2021/11/09 00:00,2021/11/09 00:01,0.00,esto es algo,
+7,TareaTESTWorkloadMayorDuracionTarea,2021/07/10 00:00,2021/07/10 01:00,1.01,esto es algo,
+7,TareaTEST5DescripcionVacia,2021/07/10 00:00,2021/07/10 01:00,1.00,,
+7,TareaTEST5DescripcionSpam,2021/07/10 00:00,2021/07/10 01:00,1.00,esto es nigeria,
+7,TareaTEST5DescripcionLarga,2021/07/10 00:00,2021/07/10 01:00,1.00,estoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoestoEsAlgoEsAlgoestoEsAlgoaaaa,
+7,TareaTEST6URLmal,2021/07/10 00:00,2021/07/10 01:00,1.00,esto es algo,urlfalsa
