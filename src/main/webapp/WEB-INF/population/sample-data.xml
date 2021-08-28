@@ -270,44 +270,37 @@
 <!-- Shouts -->
 
 <bean id="shout01" class="acme.framework.entities.Shout">
-	<property name="moment" value="2021/05/03 19:39"/>
+	<property name="moment" value="2021/08/27 19:39"/>
 	<property name="author" value="John Doe"/>
 	<property name="text"   value="Im Happy"/>
 	<property name="info"> <null/> </property>
 </bean>
 
 <bean id="shout02" class="acme.framework.entities.Shout">
-	<property name="moment" value="2021/05/02 15:55"/>
+	<property name="moment" value="2021/08/26 15:55"/>
 	<property name="author" value="Jane Doe"/>
 	<property name="text"   value="Im Sad"/>
 	<property name="info" value="http://www.example.org"/>
 </bean>
 
 <bean id="shout03" class="acme.framework.entities.Shout">
-	<property name="moment" value="2011/07/27 00:00"/>
+	<property name="moment" value="2021/08/27 00:00"/>
 	<property name="author" value="Antonio José"/>
 	<property name="text"   value="Ostia tío que no lo he enchufado"/>
 	<property name="info" value="http://www.aeromodelismo.com/"/>
 </bean>
 
 <bean id="shout04" class="acme.framework.entities.Shout">
-	<property name="moment" value="2003/11/21 19:07"/>
+	<property name="moment" value="2021/08/25 19:07"/>
 	<property name="author" value="Manuel Ruiz de Lopera"/>
 	<property name="text"   value="Me estais exigiendo que me estais cansando"/>
 	<property name="info"> <null/> </property>
 </bean>
 
 <bean id="shout05" class="acme.framework.entities.Shout">
-	<property name="moment" value="2000/01/01 22:00"/>
+	<property name="moment" value="2021/08/27 22:00"/>
 	<property name="author" value="Manuel Ruiz de Lopera"/>
 	<property name="text"   value="Aquí tenéis la caja de herramientas"/>
-	<property name="info"> <null/> </property>
-</bean>
-
-<bean id="shout06" class="acme.framework.entities.Shout">
-	<property name="moment" value="2021/05/02 2:10"/>
-	<property name="author" value="Antonio Bermejo"/>
-	<property name="text"   value="Tengo sueño"/>
 	<property name="info"> <null/> </property>
 </bean>
 
