@@ -29,4 +29,5 @@ authenticated.manager.task.form.button.return = Return
 manager.task.error.spam = Text detected as Spam
 manager.task.error.fechafin = End date can´t be before start date
 manager.task.error.fechainicio = Start date can´t be before today
-manager.task.error.workload = The workload must be lower or equals than the task's execution period
+manager.task.error.workload.format = Workload must be one decimal place less than .6
+manager.task.error.workload.period = The workload must be lower or equals than the task's execution period

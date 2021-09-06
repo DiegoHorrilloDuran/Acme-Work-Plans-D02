@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 /*
  * En este test vamos a comprobar tanto el caso positivo de la creacion de una task del manager como los 
  * diferentes casos negativos que pueden ocurrir durante la creacion de una task.
  */
-public class ManagerTaskCreateTest extends AcmePlannerTest {
+public class ManagerTaskCreateTest extends AcmeWorkPlansTest {
 	
 	/*
 	 * CASO POSITIVO

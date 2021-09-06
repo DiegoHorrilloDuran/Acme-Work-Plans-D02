@@ -11,6 +11,7 @@
 authenticated.task.list.label.title = Title
 authenticated.task.list.label.start = Start
 authenticated.task.list.label.end = End
+authenticated.task.list.label.workload = Workload
 
 authenticated.task.form.label.title = Title:
 authenticated.task.form.label.start = Start:

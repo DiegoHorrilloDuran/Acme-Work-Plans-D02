@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 
 //Aquí vamos a testear el mostrar el listado de todas las shouts disponibles
-public class AnonymousTaskListTest extends AcmePlannerTest{
+public class AnonymousTaskListTest extends AcmeWorkPlansTest{
 	
 	
 	@ParameterizedTest

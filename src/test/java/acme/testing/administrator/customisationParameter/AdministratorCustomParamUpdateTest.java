@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 
-public class AdministratorCustomParamUpdateTest extends AcmePlannerTest {
+public class AdministratorCustomParamUpdateTest extends AcmeWorkPlansTest {
 
 	//Positive update test case. Adds a new spamword and a new threshold.
 	@ParameterizedTest

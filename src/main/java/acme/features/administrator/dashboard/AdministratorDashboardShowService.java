@@ -8,7 +8,6 @@ import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.entities.Dashboard;
 import acme.framework.services.AbstractShowService;
-import acme.framework.utilities.Duration;
 
 @Service
 public class AdministratorDashboardShowService implements AbstractShowService<Administrator, Dashboard> {
@@ -48,10 +47,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		dashboard.setMinTaskExecutionPeriod(this.repository.getMinTaskExecutionPeriod());
 		dashboard.setAvgTaskExecutionPeriods(this.repository.getAvgTaskExecutionPeriods());
 		dashboard.setStdDevTaskExecutionPeriods(this.repository.getStdDevTaskExecutionPeriods());
-		dashboard.setMaxTaskWorkload(Duration.correctPeriod(this.repository.getMaxTaskWorkload()));
-		dashboard.setMinTaskWorkload(Duration.correctPeriod(this.repository.getMinTaskWorkload()));
-		dashboard.setAvgTaskWorkloads(Duration.correctPeriod(this.repository.getAvgTaskWorkloads()));
-		dashboard.setStdDevTaskWorkloads(Duration.correctPeriod(this.repository.getStdDevTaskWorkloads()));
+		dashboard.setMaxTaskWorkload(this.repository.getMaxTaskWorkload());
+		dashboard.setMinTaskWorkload(this.repository.getMinTaskWorkload());
+		dashboard.setAvgTaskWorkloads(this.repository.getAvgTaskWorkloads());
+		dashboard.setStdDevTaskWorkloads(this.repository.getStdDevTaskWorkloads());
 		
 		return dashboard;
 	}

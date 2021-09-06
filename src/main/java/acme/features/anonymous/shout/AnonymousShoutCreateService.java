@@ -1,6 +1,6 @@
 package acme.features.anonymous.shout;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,9 +50,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		
 		Shout result;
-		LocalDate moment;
+		Date moment;
 
-		moment = LocalDate.now();
+		moment = new Date(System.currentTimeMillis()-1);
 		
 		result = new Shout();
 		result.setAuthor("");
@@ -86,9 +86,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		
-		LocalDate moment;
+		Date moment;
 		
-		moment = LocalDate.now();
+		moment = new Date(System.currentTimeMillis()-1);
 		entity.setMoment(moment);
 		this.repository.save(entity);
 	}

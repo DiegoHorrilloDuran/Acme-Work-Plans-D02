@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 //Aquí vamos a testear el mostrar el listado de todas las tasks authenticated casos positivos
-public class AuthenticatedTaskListTest extends AcmePlannerTest {
+public class AuthenticatedTaskListTest extends AcmeWorkPlansTest {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/task/listAll.csv", encoding = "utf-8", numLinesToSkip = 1)

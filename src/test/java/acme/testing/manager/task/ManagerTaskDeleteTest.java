@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 /*
  * En este test vamos a comprobar el caso positivo de borrar una task del manager.
  */
-public class ManagerTaskDeleteTest extends AcmePlannerTest {
+public class ManagerTaskDeleteTest extends AcmeWorkPlansTest {
 	
 	/*
 	 * CASO POSITIVO: Borramos una tarea correctamente

@@ -1,8 +1,9 @@
-recordIndex,title,start,end,workload,description,optionalLink
-0,T,2021/09/05 00:00,2021/10/07 16:00,15.00,esto es algo,http://www.ejemplotest.org
-0,TareaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTe,2021/09/05 00:00,2021/10/07 16:00,15.00,esto es algo,
-0,TareaTEST01,2021/07/10 00:00,2021/07/10 01:00,1.00,esto es algo,
-0,TareaTEST02,2021/07/10 00:00,2021/07/10 00:01,0.01,esto es algo,
-0,TareaTEST03,2021/07/10 00:00,2021/07/10 01:00,0.59,esto es algo,
-0,TareaTEST5,2021/07/10 00:00,2021/07/10 18:00,15.00,EsAlgoestoEsAlgEsAlgoestoEsAlgoeoestoEsAlgoestoEsAlgoe,
-0,TareaTEST6,2021/07/10 00:00,2021/07/10 18:00,15.00,e,http://www.ejemplotest.org
+recordIndex,newRecordIndex,title,start,end,workload,description,optionalLink
+0,6,T,2021/11/09 00:00,2021/11/09 18:00,5.00,Esto es otra tarea,http://www.ejemplotest.org
+0,5,TareaTEST02reaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTestTareaTe,2021/11/09 00:00,2021/11/09 18:00,2.00,Esto es una tarea,
+0,0,TareaTEST03,2021/10/08 18:00,2021/10/12 22:00,99.59,Esto es otra tarea,
+1,4,TareaTEST04,2021/11/09 00:00,2021/11/09 01:00,1.00,Esto es otra tarea,
+1,3,TareaTEST05,2021/11/09 00:00,2021/11/09 00:01,0.01,Esto es otra tarea,
+1,3,TareaTEST06,2021/11/09 00:00,2021/11/09 01:00,0.59,Esto es otra tarea,http://www.example2.org
+1,1,TareaTEST07,2021/11/03 10:00,2021/11/05 10:00,9.00,Descripcion////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////,
+7,7,TareaTEST08,2021/12/15 16:00,2021/12/17 16:00,8.00,e,http://www.example3.org

@@ -12,6 +12,7 @@
 anonymous.task.list.label.title = Title
 anonymous.task.list.label.start = Start
 anonymous.task.list.label.end = End
+anonymous.task.list.label.workload = Workload
 
 anonymous.task.form.label.title = Title:
 anonymous.task.form.label.start = Start:
