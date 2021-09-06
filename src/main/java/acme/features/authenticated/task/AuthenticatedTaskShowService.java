@@ -20,8 +20,10 @@ public class AuthenticatedTaskShowService implements AbstractShowService<Authent
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
+		final int taskId = request.getModel().getInteger("id");
+		final Task task = this.repository.findOneTaskById(taskId);
 
-		return true;
+		return !task.getPrivacy();
 	}
 
 	@Override

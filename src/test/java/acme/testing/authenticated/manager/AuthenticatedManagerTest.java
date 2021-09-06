@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 
-public class AuthenticatedManagerTest extends AcmePlannerTest {
+public class AuthenticatedManagerTest extends AcmeWorkPlansTest {
 
 	//Aquí vamos a testear si esta un administrador autenticado como manager caso positivo
 	@ParameterizedTest

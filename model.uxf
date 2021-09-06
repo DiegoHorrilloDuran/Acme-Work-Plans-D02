@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
+      <x>553</x>
       <y>168</y>
       <w>168</w>
       <h>42</h>
@@ -16,20 +16,9 @@ bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>483</x>
-      <y>168</y>
-      <w>56</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>60.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>175</x>
+      <x>203</x>
       <y>98</y>
       <w>154</w>
       <h>84</h>
@@ -49,7 +38,7 @@ bg=orange
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>175</x>
+      <x>203</x>
       <y>35</y>
       <w>168</w>
       <h>42</h>
@@ -62,7 +51,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
+      <x>273</x>
       <y>70</y>
       <w>21</w>
       <h>42</h>
@@ -72,20 +61,9 @@ bg=blue</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>483</x>
-      <y>203</y>
-      <w>63</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
+      <x>798</x>
       <y>133</y>
       <w>70</w>
       <h>42</h>
@@ -100,7 +78,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
+      <x>798</x>
       <y>91</y>
       <w>70</w>
       <h>42</h>
@@ -115,7 +93,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
+      <x>798</x>
       <y>175</y>
       <w>70</w>
       <h>42</h>
@@ -130,7 +108,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>686</x>
+      <x>714</x>
       <y>119</y>
       <w>98</w>
       <h>84</h>
@@ -141,7 +119,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>686</x>
+      <x>714</x>
       <y>140</y>
       <w>98</w>
       <h>63</h>
@@ -152,7 +130,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>686</x>
+      <x>714</x>
       <y>175</y>
       <w>98</w>
       <h>28</h>
@@ -163,7 +141,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>175</x>
+      <x>203</x>
       <y>196</y>
       <w>154</w>
       <h>49</h>
@@ -179,37 +157,7 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>147</y>
-      <w>140</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Role&gt;&gt;
-Provider
---
-+ company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>343</x>
-      <y>224</y>
-      <w>147</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Role&gt;&gt;
-Consumer
---
-+ company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>7</x>
+      <x>35</x>
       <y>98</y>
       <w>154</w>
       <h>56</h>
@@ -226,7 +174,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>7</x>
+      <x>35</x>
       <y>168</y>
       <w>154</w>
       <h>91</h>
@@ -246,7 +194,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>7</x>
+      <x>35</x>
       <y>273</y>
       <w>154</w>
       <h>63</h>
@@ -263,7 +211,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>483</x>
+      <x>511</x>
       <y>0</y>
       <w>238</w>
       <h>91</h>
@@ -285,7 +233,7 @@ UserAccount
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
+      <x>630</x>
       <y>84</y>
       <w>49</w>
       <h>98</h>
@@ -299,26 +247,27 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>672</x>
+      <x>665</x>
       <y>329</y>
-      <w>217</w>
+      <w>308</w>
       <h>119</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Task
 --
 +title: String{NotEmpty, Lenght(Max 79)}
-+start: Date{NotNull}
-+end: Date{NotNull}
-+workload: Double{NotNull}
++start: Date{NotNull, Temporal(TIMESTAMP), Future}
++end: Date{NotNull, Temporal(TIMESTAMP), Future}
++workload: Double{NotNull,Positive, Length {Min 0.01, Max 99.59}}
 +description: String{NotEmpty, Lenght(Max 499)}
-+privacy: Boolean{NotNull}</panel_attributes>
++privacy: Boolean{NotNull}
++optional link: String {URL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>343</x>
+      <x>371</x>
       <y>329</y>
       <w>252</w>
       <h>77</h>
@@ -327,15 +276,15 @@ Task
 Shout
 --
 + moment: Date(NotNull, Temporal(TIMESTAMP), Past)
-+ author: String (NotBlank)
-+ text: String (NotBlank)
++ author: String (NotBlank,Length{Min 5, Max 25})
++ text: String (NotBlank, Lenth{Max 100})
 + info: String (URL)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
+      <x>798</x>
       <y>217</y>
       <w>70</w>
       <h>42</h>
@@ -350,7 +299,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>686</x>
+      <x>714</x>
       <y>182</y>
       <w>98</w>
       <h>70</h>
@@ -361,7 +310,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
+      <x>812</x>
       <y>252</y>
       <w>21</w>
       <h>91</h>
@@ -372,7 +321,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>798</x>
+      <x>826</x>
       <y>308</y>
       <w>70</w>
       <h>49</h>
@@ -384,7 +333,7 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>798</x>
+      <x>826</x>
       <y>259</y>
       <w>70</w>
       <h>49</h>

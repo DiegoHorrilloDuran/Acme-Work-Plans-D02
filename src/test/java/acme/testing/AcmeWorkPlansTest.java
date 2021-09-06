@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 
 import acme.framework.helpers.StringHelper;
 
-public abstract class AcmePlannerTest extends AcmeTest{
+public abstract class AcmeWorkPlansTest extends AcmeTest{
 
 	@Override
 	@BeforeAll
@@ -12,7 +12,7 @@ public abstract class AcmePlannerTest extends AcmeTest{
 		super.setHeadless(true);
 		super.beforeAll();
 		
-		super.setBaseCamp("http", "localhost", "8080", "/Acme-Planner", "/master/welcome", "?language=en&debug=true");
+		super.setBaseCamp("http", "localhost", "8080", "/Acme-Work-Plans", "/master/welcome", "?language=en&debug=true");
 		super.setAutoPausing(false);
 		
 		this.navigateHome();
@@ -71,7 +71,7 @@ public abstract class AcmePlannerTest extends AcmeTest{
 		this.navigate(() -> {
 			String url;
 
-			url = String.format("%s/%s", this.baseUrl, path);
+			url = String.format("%s%s", this.baseUrl, path);
 			this.driver.get(url);
 			this.longSleep();
 		});

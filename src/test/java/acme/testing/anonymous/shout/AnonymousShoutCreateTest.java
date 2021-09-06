@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class AnonymousShoutCreateTest extends AcmePlannerTest {
+public class AnonymousShoutCreateTest extends AcmeWorkPlansTest {
 	
 	/*CASO POSITIVO
 	1. Todo relleno correctamente
@@ -24,6 +24,11 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("info", info);
 		
 		super.clickOnSubmitButton("Shout!");
+		
+		super.clickOnMenu("Anonymous", "Shouts");
+		super.checkColumnHasValue(recordIndex, 1, author);
+		super.checkColumnHasValue(recordIndex, 2, text);
+		
 		
 	}
 	

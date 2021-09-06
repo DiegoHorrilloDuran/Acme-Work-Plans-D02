@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 //Aquí vamos a testear el mostrar el listado de todas las shouts disponibles
-public class ManagerTaskListTest extends AcmePlannerTest{
+public class ManagerTaskListTest extends AcmeWorkPlansTest{
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/listTask.csv", encoding = "utf-8", numLinesToSkip = 1)

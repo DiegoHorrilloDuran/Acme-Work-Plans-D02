@@ -16,7 +16,7 @@ master.banner.background = #000000
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	Bienvenidos a Acme Work Plans! Planealo!
+	Bienvenidos a Acme Work Plans!  Planealo!
 
 # master.menu #################################################################
 
@@ -30,7 +30,7 @@ master.menu.sign-out = Salir
 master.menu.anonymous = Anónimo
 master.menu.anonymous.shout.list = Gritos
 master.menu.anonymous.shout.form = Nuevo grito
-master.menu.anonymous.task = Tareas
+master.menu.anonymous.task = Tareas no finalizadas
 
 
 # master.menu.administrator ###################################################
@@ -46,7 +46,7 @@ master.menu.administrator.shutdown = Parar el sistema
 # master.menu.authenticated ########################################################
 
 master.menu.authenticated = Autenticado
-master.menu.authenticated.task = Tareas públicas
+master.menu.authenticated.task = Tareas públicas finalizadas
 
 # master.menu.manager ########################################################
 
@@ -54,25 +54,11 @@ master.menu.manager = Manager
 master.menu.manager.task.list = Tareas del manager
 master.menu.manager.task.create = Crear tarea
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.become-manager = Hazte manager
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.task = Tareas públicas
 
 # master.footer ###############################################################

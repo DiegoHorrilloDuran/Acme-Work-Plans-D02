@@ -11,6 +11,7 @@
 authenticated.task.list.label.title = Título
 authenticated.task.list.label.start = Comienzo
 authenticated.task.list.label.end = Final
+authenticated.task.list.label.workload = Carga de trabajo
 
 authenticated.task.form.label.title = Título:
 authenticated.task.form.label.start = Comienzo:

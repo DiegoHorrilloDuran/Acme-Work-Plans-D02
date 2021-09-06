@@ -16,7 +16,7 @@ master.banner.background = #000000
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Acme Worl Plans! Plan it!
+	Welcome to Acme Work Plans! Plan it!
 
 # master.menu #################################################################
 
@@ -30,7 +30,7 @@ master.menu.sign-out = Sign out
 master.menu.anonymous = Anonymous
 master.menu.anonymous.shout.list = Shouts
 master.menu.anonymous.shout.form = New shout
-master.menu.anonymous.task = Tasks
+master.menu.anonymous.task = Non-finished tasks
 
 # master.menu.administrator ###################################################
 
@@ -46,7 +46,7 @@ master.menu.administrator.shutdown = Shut down
 # master.menu.authenticated ########################################################
 
 master.menu.authenticated = Authenticated
-master.menu.authenticated.task = Public tasks
+master.menu.authenticated.task = Finished public tasks
 
 # master.menu.manager ########################################################
 
@@ -54,26 +54,11 @@ master.menu.manager = Manager
 master.menu.manager.task.list = Manager tasks
 master.menu.manager.task.create = Create task
 
-
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
-
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
 master.menu.user-account.become-manager = Become a manager
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.task = Public tasks
 
 # master.footer ###############################################################

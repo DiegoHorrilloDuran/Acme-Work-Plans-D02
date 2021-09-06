@@ -15,7 +15,6 @@ import acme.framework.entities.CustomisationParameter;
 import acme.framework.entities.Manager;
 import acme.framework.entities.Task;
 import acme.framework.services.AbstractUpdateService;
-import acme.framework.utilities.Duration;
 import acme.framework.utilities.SpamDetect;
 
 @Service
@@ -27,9 +26,12 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
+		final int id = request.getModel().getInteger("id");
+		final Task task = this.repository.findOneTaskById(id);
+		final int idManager = task.getIdmanager();   //idManager es el Id del UsserAccount del manager que ha creado la tarea.
+		final int currentId = request.getPrincipal().getAccountId();
 
-		return true;
-		
+		return currentId == idManager;
 	}
 
 	@Override
@@ -70,21 +72,9 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
+
 		final Date ahora = Date.from(Instant.now());
-		Double wl = entity.getWorkload();
-		if (wl != null) {
-			wl = Duration.correctPeriod(wl);
-		}
-
-		if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
-			errors.state(request, !entity.getStart().before(ahora), "start", "manager.task.error.fechainicio");
-			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.error.fechafin");
-		}
-
-		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {
-			errors.state(request, wl <= entity.getExecutionPeriod(), "workload", "manager.task.error.workload");
-		}
+		final Double wl = entity.getWorkload();
 
 		final CustomisationParameter params = this.repository.findSpam().get(0);
 
@@ -98,6 +88,19 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		
 		if (!errors.hasErrors("optionalLink")) {
 			errors.state(request, !SpamDetect.isSpamText(entity.getOptionalLink(), params), "optionalLink", "manager.task.error.spam");
+		}
+		
+		if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
+			errors.state(request, !entity.getStart().before(ahora), "start", "manager.task.error.fechainicio");
+			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.error.fechafin");
+		}
+
+		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {
+			errors.state(request, (wl-wl.intValue())<.599, "workload", "manager.task.error.workload.format");
+		}
+		
+		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {
+			errors.state(request, wl <= entity.getExecutionPeriod(), "workload", "manager.task.error.workload.period");
 		}
      }
 	
@@ -126,7 +129,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		entity.setTitle(title);
 		entity.setStart(start);
 		entity.setEnd(end);
-		entity.setWorkload(Duration.correctPeriod(workload));
+		entity.setWorkload(workload);
 		entity.setDescription(description);
 		entity.setPrivacy(privacy);
 		

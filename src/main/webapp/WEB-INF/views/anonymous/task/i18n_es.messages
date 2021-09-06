@@ -12,6 +12,7 @@
 anonymous.task.list.label.title = Título
 anonymous.task.list.label.start = Comienzo
 anonymous.task.list.label.end = Final
+anonymous.task.list.label.workload = Carga de trabajo
 
 anonymous.task.form.label.title = Título:
 anonymous.task.form.label.start = Comienzo:

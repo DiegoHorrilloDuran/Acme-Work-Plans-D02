@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 /*
  * En este test vamos a comprobar tanto el caso positivo de la actualizacion de una task del manager como los 
  * diferentes casos negativos que pueden ocurrir durante la actualizacion de una task.
  */
-public class ManagerTaskUpdateTest extends AcmePlannerTest {
+public class ManagerTaskUpdateTest extends AcmeWorkPlansTest {
 	
 	/*
 	 * CASO POSITIVO: Los diferentes casos positivos a tratar son:
@@ -21,7 +21,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
     @Order(45)
-	public void updatePositive(final int recordIndex, final String title, final String start, final String end, final String workload, final String description, final String optionalLink) {
+	public void updatePositive(final int recordIndex,final int newRecordIndex, final String title, final String start, final String end, final String workload, final String description, final String optionalLink) {
 		
 		//Iniciamos sesion con el usuario de manager01
 		super.signIn("manager01", "manager01");
@@ -45,12 +45,12 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 		super.clickOnMenu("Manager", "Manager tasks"); //nos vamos ahora al listado de todas las tareas del manager
 		
 		//Comprueba en el listado que existe un objeto con dichos valores
-		super.checkColumnHasValue(recordIndex, 0, title);
-		super.checkColumnHasValue(recordIndex, 1, start);
-		super.checkColumnHasValue(recordIndex, 2, end);
+		super.checkColumnHasValue(newRecordIndex, 0, title);
+		super.checkColumnHasValue(newRecordIndex, 1, start);
+		super.checkColumnHasValue(newRecordIndex, 2, end);
 		
 		//Clicamos en la tarea especifica para ver los detalles de esa tarea
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnListingRecord(newRecordIndex);
 		
 		//Vamos a comprobar que cada elemnto tiene el valor del csv
 		super.checkInputBoxHasValue("title", title);

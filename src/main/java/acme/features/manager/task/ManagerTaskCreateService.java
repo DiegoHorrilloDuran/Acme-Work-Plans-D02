@@ -1,6 +1,7 @@
 
 package acme.features.manager.task;
 
+
 import java.time.Instant;
 import java.util.Date;
 
@@ -14,7 +15,6 @@ import acme.framework.entities.CustomisationParameter;
 import acme.framework.entities.Manager;
 import acme.framework.entities.Task;
 import acme.framework.services.AbstractCreateService;
-import acme.framework.utilities.Duration;
 import acme.framework.utilities.SpamDetect;
 
 @Service
@@ -71,19 +71,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert errors != null;
 
 		final Date ahora = Date.from(Instant.now());
-		Double wl = entity.getWorkload();
-		if (wl != null) {
-			wl = Duration.correctPeriod(wl);
-		}
-
-		if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
-			errors.state(request, !entity.getStart().before(ahora), "start", "manager.task.error.fechainicio");
-			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.error.fechafin");
-		}
-
-		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {
-			errors.state(request, wl <= entity.getExecutionPeriod(), "workload", "manager.task.error.workload");
-		}
+		final Double wl = entity.getWorkload();
 
 		final CustomisationParameter params = this.repository.findSpam().get(0);
 
@@ -98,6 +86,19 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		if (!errors.hasErrors("optionalLink")) {
 			errors.state(request, !SpamDetect.isSpamText(entity.getOptionalLink(), params), "optionalLink", "manager.task.error.spam");
 		}
+		
+		if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
+			errors.state(request, !entity.getStart().before(ahora), "start", "manager.task.error.fechainicio");
+			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.error.fechafin");
+		}
+
+		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {
+			errors.state(request, (wl-wl.intValue())<.599, "workload", "manager.task.error.workload.format");
+		}
+		
+		if (!errors.hasErrors("start") && !errors.hasErrors("end") && !errors.hasErrors("workload")) {
+			errors.state(request, wl <= entity.getExecutionPeriod(), "workload", "manager.task.error.workload.period");
+		}
 
 	}
 
@@ -105,10 +106,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	public void create(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
-
-		final Double wl = request.getModel().getDouble("workload");
-
-		entity.setWorkload(Duration.correctPeriod(wl));
 
 		this.repository.save(entity);
 	}

@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 
 //Aquí vamos a testear el mostrar el listado de todas las shouts disponibles
-public class AnonymousTaskListTest extends AcmePlannerTest{
+public class AnonymousTaskListTest extends AcmeWorkPlansTest{
 	
 	
 	@ParameterizedTest
@@ -20,7 +20,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 		
 	//Testeamos el list	
 		
-		super.clickOnMenu("Anonymous", "Tasks");
+		super.clickOnMenu("Anonymous", "Non-finished tasks");
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, start);
@@ -47,9 +47,10 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 			@CsvFileSource(resources = "/anonymous/task/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 			@Order(16)
 			public void listAllNegative(final int recordIndex, final String path) {
-							
+				super.signIn("administrator", "administrator");		
 				super.navigateTo(path);
 				super.checkErrorsExist();
+				super.signOut();
 			}
 
 }
